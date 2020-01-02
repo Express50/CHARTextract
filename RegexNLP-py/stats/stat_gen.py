@@ -9,8 +9,9 @@ def get_failures(classifier_runner, cur_dataset, conf_path, print_output=True):
     try:
         failures_dict = {}
         try:
-            cur_labels_list = sorted(list(set(classifier_runner.classifier.dataset[cur_dataset]["preds"].tolist()) |
-                                      set(classifier_runner.classifier.dataset[cur_dataset]["labels"].tolist())))
+            preds = set(classifier_runner.classifier.dataset[cur_dataset]["preds"].tolist())
+            labels = set(classifier_runner.classifier.dataset[cur_dataset]["labels"].tolist())
+            cur_labels_list = sorted(filter(lambda x: x is not None, preds | labels))
         except TypeError:
             raise SpecialException("Error occurred when generating stats. Check label file to make sure all ids are unique.")
         accuracy, \
