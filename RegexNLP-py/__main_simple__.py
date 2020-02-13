@@ -92,7 +92,7 @@ def get_project_settings(project_settings_path=None):
     return data
 
 
-@exposed_function
+# @exposed_function
 def run_variable(variable, settings, mode):
 
     effects = ["a", "aa", "ab", "r", "rb", "ra"]
@@ -241,7 +241,7 @@ def run_variable(variable, settings, mode):
                                       custom_class_colours=custom_class_colours)
 
 
-@exposed_function
+# @exposed_function
 def set_cwd(current_dir):
     os.chdir(current_dir)
     global cwd
@@ -259,22 +259,22 @@ def paths():
 def get_cwd():
     respond(cwd)
 """
-import traceback
+# import traceback
 
-respond({'app_ready': 'Ready'})
-for line in sys.stdin:
-    try:
-        x = json.loads(line)
-        if x['function'] in available_funcs:
-            if 'params' in x:
-                available_funcs[x['function']](**x['params'])
-            else:
-                available_funcs[x['function']]()
-            respond({'status': 200})
-        else:
-            respond({'available_funcs': list(available_funcs.keys())}, True)
-            respond({'status': 404})
-    except SpecialException as e:
-        respond({'status': 404, 'message': str(e)})
-    except Exception as e1:
-        respond({'status': 404, 'message': str(traceback.format_exc())})
+# respond({'app_ready': 'Ready'})
+# for line in sys.stdin:
+#     try:
+#         x = json.loads(line)
+#         if x['function'] in available_funcs:
+#             if 'params' in x:
+#                 available_funcs[x['function']](**x['params'])
+#             else:
+#                 available_funcs[x['function']]()
+#             respond({'status': 200})
+#         else:
+#             respond({'available_funcs': list(available_funcs.keys())}, True)
+#             respond({'status': 404})
+#     except SpecialException as e:
+#         respond({'status': 404, 'message': str(e)})
+#     except Exception as e1:
+#         respond({'status': 404, 'message': str(traceback.format_exc())})
