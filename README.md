@@ -18,7 +18,7 @@
 ### Installing and running application (support for Python 3.7 & conda):
 - Install the required Python dependencies:
 
-```conda create -n [ENV_NAME] --file package-list.txt```
+```conda env create -f environment.yml```
 
 - Install Node dependencies:
 
