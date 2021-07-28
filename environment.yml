@@ -44,7 +44,7 @@ dependencies:
   - pytz=2018.5=py37_0
   - pyyaml=3.13=py37hfa6e2cd_0
   - pyzmq=17.1.2=py37hfa6e2cd_0
-  - scikit-learn=0.19.1=py37hae9bb9f_0
+  - scikit-learn=0.19.1
   - setuptools=40.2.0=py37_0
   - simplegeneric=0.8.1=py37_2
   - sortedcontainers=2.0.5=py37_0
