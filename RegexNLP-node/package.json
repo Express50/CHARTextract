@@ -1,6 +1,6 @@
 {
   "name": "CHARTextract",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "private": true,
   "main": "bin/www",
   "author": "LKS-CHART",
@@ -20,19 +20,19 @@
     "express": "~4.16.0",
     "http-errors": "~1.6.2",
     "morgan": "~1.9.0",
-    "pug": "^2.0.4",
+    "pug": "^3.0.2",
     "python-shell": "^0.5.0",
     "table-parser": "^1.0.1",
     "windows-autoconf": "^1.11.1"
   },
   "devDependencies": {
     "@types/express": "^4.16.0",
-    "electron": "3.0.7",
+    "electron": "^13.1.7",
     "electron-builder": "^20.44.4",
     "eslint": "^5.8.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
-    "semantic-release": "^15.10.8"
+    "semantic-release": "^17.4.4"
   },
   "build": {
     "appId": "com.lks-chart.chart-extract",

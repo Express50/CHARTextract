@@ -19,7 +19,7 @@ if (isDev) {
     }
 	console.log("App Root: " + path_helper.getAppRoot());
 } else {
-    python_shell.defaultOptions = { pythonPath: path.resolve(__dirname, "..", "RegexNLP-py", "RegexNLP.exe")};
+    python_shell.defaultOptions = { pythonPath: path.resolve(__dirname, "..", "CHARTextract", "CHARTextract.exe")};
     scriptPath = "";
 }
 
